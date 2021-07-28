@@ -4,7 +4,8 @@
 // set up port
 // set up server
 // tell app to use statics
-// send all requests to index.html
+// send '/' to index.html
+// routing
 var path = require('path');
 var express = require('express');
 var app = express();
@@ -13,4 +14,7 @@ var server = app.listen(port, function() {
     console.log('Node app is running on port', port);
 });
 app.use(express.static('build'));
-app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.get('/', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.get('/:page', (req, res) => {
+    console.log(req.params)
+    res.sendFile(path.resolve('build', `${req.params}/index.html`))});
