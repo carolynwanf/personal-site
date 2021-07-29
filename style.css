@@ -9,7 +9,12 @@ body {
 
 }
 
+section {
+  margin-bottom: 3em;
+}
+
 p {
+  /* text-align: justify; */
   margin-block-start: 0%;
   margin-block-end: 0%;
 }
@@ -21,26 +26,41 @@ main {
   max-width: 600px;
 }
 
+/* .cat-wrapper {
+  margin: 0em 1em;
+} */
+
+figure {
+  margin-left: 0;
+  margin-right:0;
+}
 img.cat{
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   align-content: center;
 
 
 
 }
 
-/* rgb(255, 225, 58) */
-
-/* h1 {
-  
-  font-weight: 500;
+h1 {
+  margin-block-end: 0.1em;
+  margin-block-start: 0em;
+  font-size: 2em;
 }
 
-h3 {
+h1, h2 {
+  
   font-weight: 500;
-} */
-
+  letter-spacing: 0.15em;
+  color:rgb(96, 162, 190);
+  text-shadow: 1px -1px white,
+              -1px 1px rgb(18, 100, 136),
+              -2px 2px rgb(18, 100, 136),
+              /* -3px 3px rgb(18, 100, 136),
+              -4px 4px rgb(18, 100, 136), */
+              -4px 2px rgb(114, 157, 175);
+}
 
 figcaption {
   font-size: 0.8em
@@ -50,25 +70,25 @@ figcaption {
 a{
   text-decoration: none;
 }
-#links {
-  
-  margin-top: 20px;
-  margin-bottom: 40px;
+
+#links{
+  margin-top:20px;
 }
+
 #project {
+  margin: 10px auto;
   color:rgb(190, 150, 30);
   line-height: 1.5;
 
   border-radius: 10px;
-  margin-left: 40px;
-  margin-bottom: 10px;
+
+  
   padding: 1em;
   align-content: center;
-  background-color:rgb(255, 250, 235)
-  ;
-  
+  background-color:rgb(255, 250, 235);
+  display:block;
  
-  width: 72%;
+  width: 90%;
   
   box-shadow:
   1px -1px white,
@@ -117,4 +137,27 @@ a{
   text-transform: uppercase;
   font-size: 1.1em;
   margin-bottom: 3px;
+  text-shadow: 1px 1px white, -1px -1px rgb(252, 220, 124);
+}
+
+/* quick links */
+.quick-link {
+  align-content: left;
+  color:rgb(96, 162, 190);
+  text-shadow: 0px 1px white;
+  margin: 0.5em;
+}
+
+.quick-link:hover {
+  color: rgb(0, 54, 63)
+}
+
+.menu {
+  float:right;
+  
+}
+
+.box{
+  height:1em;
+  width:100%
 }

@@ -12,23 +12,42 @@
 
 <html>  
     <body>
-   
+   <header>
+       <div class='box'>
+        <div class='menu'>
+            <a class='quick-link' href='#projects'>Projects</a>
+           
+            <a class='quick-link' href='#crafts'>Crafts</a>
+           
+            <a class='quick-link' href='#baking'>Baking</a>
+           
+            <a class='quick-link' href='#contact'>Contact</a>
+           </div>
+
+       </div>
+      
+   </header>
         <main>
-            <h1>Hi!</h1>
-            <p>I'm <strong>Carolyn</strong>. I like making things, taking naps, and petting cats.</p>
-            <figure>
-                <img class="cat" src='public/me-and-toffee.jpg' alt="me and a cat"/>
-                <figcaption>me and Toffee, my favorite cat</figcaption>
-            </figure>
-            <p> I'm interested in the open ocean, clean tech, human-centered design, learning new things, and getting better at explaining new things.</p>
+            <section id='about'>
+                <h1>Hi!</h1>
+                <p>I'm <strong>Carolyn</strong>. I like making things, taking naps, and petting cats.</p>
+                <figure>
+                    <div class='cat-wrapper'><img class="cat" src='public/me-and-toffee.jpg' alt="me and a cat"/></div>
+                    <figcaption>me and Toffee, my favorite cat</figcaption>
+                </figure>
+                <p> I'm interested in the open ocean, clean tech, human-centered design, learning new things, and getting better at explaining new things. I'm currently trying to figure out how to implement local storage.</p>
+
+            </section>
+
+          
             <section id='projects'>
-                <h3>Projects</h2>
+                <h2>Projects</h2>
                 <p>I took time off school in spring 2021 to learn how to build things. What I'm most proud of :</p>
                 <div id='links'>
                         <a  href='/meatless'> 
                             <div id=project>
                                 <p class='project-header'>Meatless</p>
-                                <p>A native app to help people who want to eat less meat find meatless dishes near them. It was my first time building a scraper, working with MongoDB, playing around with ML models, and using Flutter.</p>
+                                <p>A native app to help people who want to eat less meat find meatless dishes near them. It was my first time building a scraper, working with MongoDB, trying to use ML models, and building a Flutter app.</p>
                                 <img class='project-image' src="public/meatless-icon.png"/>  
                             </div>
                         </a>
@@ -56,13 +75,15 @@
             </section>
             
             <section id='crafts'>
-                <h3>Crafts</h2>
+                <h2>Crafts</h2>
                 <p>I'm constantly crafting! What I've been up to recently :</p>
                 <div id='links'>
 
                     <a href='/chinese-knotting'>
                         <div id=project>
                             <p class='project-header'>Chinese Knotting</p>
+                            <p></p>
+                            <img class='project-image' src="public/chinese-knot.jpg"/> 
                         </div>
                     </a>
                     <br>
@@ -78,7 +99,7 @@
             
             <section id='baking'>
                 
-                <h3>Baking</h2>
+                <h2>Baking</h2>
                 <p>Sweets keep me going! My favorite recipes :</p>
                     <div id='links'>
                         <a href='/strawberry-shortcake'>
@@ -91,6 +112,14 @@
                             <p class='project-header'>Fudgy Brownies</p>
                         </div></a>
                     </div>
+            </section>
+
+            <section id='contact'>
+                
+                <h2>Contact me!</h2>
+                    <a>email</a>
+                    <a>linkedin</a>
+                    <a>instagram</a>
             </section>
         </main>
         
