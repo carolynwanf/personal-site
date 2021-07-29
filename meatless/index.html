@@ -12,15 +12,95 @@
         
         <main>
             <h1>Meatless</h1>
-            <p></p>
-            <section id='origins'>
-                <h2>Origins</h2>
-                <p></p>
-            </section>
+            <figure>
+                <img class='big-image' src='../public/meatless-icon.png' alt='picture of meatless mock-up'/>
+                <figcaption>Meatless's landing page</figcaption>
+            </figure>
+            <!-- overview -->
+            <h2>Overview</h2>
+            <div class='overview'>
+                <div class="column">
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>when:</p>
+                        <p>April 2021 - August 2021</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>Objective:</p>
+                        <p>Build a tool to make it easier for people who want to eat less meat to find meatless options at restaurants.</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>my motivations:</p>
+                        <p>I had built a few small projects and I wanted to build something that would be useful to me and my friends/family in our everyday lives. Because my sister and I are vegetarian and a lot of my friends want to eat less meat for climate reasons, the above objective was perfect.</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>technologies:</p>
+                        <p>Flutter, Dart, Node.js, MongoDB, Puppeteer (web-driver).</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>Where can I see this?</p>
+                        <p><a class='small-link'>Github</a> and <a class='small-link' href='https://www.figma.com/file/aYSBjmEcBOwD2dlwTUQ1hw/Meatless?node-id=108%3A600'>Figma</a> for now, but I'm currently trying to get the web-app deployed!</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class='subcategory-right'>
+                        <p class='overview-subtitle'>Current solutions:</p>
+                        <p>Apps like DoorDash and Yelp allow you to filter for “vegetarian” or “vegan” restaurants. However, these are usually just restaurants that have the word “vegetarian” somewhere on their menu, in their description, or in their name. I also found during some initial chats that people (even those who wanted to change their diets) tended to have aversion to the word “vegetarian” because they felt that it implied commitment or exclusivity.</p>
+                    </div>
+                    <div class='subcategory-right'>
+                        <p class='overview-subtitle'>The final product: </p>
+                        <p>A native app that allows you to search for restaurants and menu items by zip code, sort restaurants by number of vegetarian dishes or the ratio of vegetarian main dishes to all main dishes, search for specific items/kinds of items within results, star menu items you’re interested in, submit reviews and ratings for menu items, and report items that contain meat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- sections -->
+           
+           
+                <div class='contents'>
+                    <p>skip to: </p>
+                    <div class ='row'>
+                        <a class='quick-link' href='#web-scraping'>Scraping</a>
+                
+                        <a class='quick-link' href='#machine-learning'>ML</a>
+                      
+                        <a class='quick-link' href='#figma'>Figma</a>
+                        
+                        <a class='quick-link' href='#flutter'>Flutter</a>
+                    </div>
+                   
+                </div>
+    
             
             <section id='web-scraping'>
-                <h2>Scraping Doordash (it's not not allowed) and learning MongoDB</h2>
-                <p></p>
+                <h2>Scraping Doordash (it's not not allowed)</h2>
+                
+                <div class='summary'>
+                    <video class='big-image' loop autoplay muted controls>
+                        <source src='../public/scraping-clip.mov'>
+                    </video>
+                    <p class='summary-header'>Quick summary of how the scraper works:</p>
+                    <ol>
+                        <li> Launch Puppeteer (headless browser).</li>
+                        <li> Navigate to DoorDash's website.</li>
+                        <li> Click into every food category and scroll down to scrape links until you can’t scroll anymore.</li>
+                        <li> Remove duplicate links.</li>
+                        <li> Navigate to each link and click into each dish one by one to scrape its name, images, description, and ordering requirements. Write this information into a MongoDB database.</li>
+                    
+                    </ol>
+                </div>
+                <p>I scraped DoorDash for restaurant information because a lot of restaurants had moved onto the platform during the pandemic. 
+                    It’s also the most widely used food delivery app in the US. It was a bit difficult to get started because DoorDash 
+                    has a dynamic website (html/css for the site are changed by code running in the browser/on the server), and the tutorial
+                     I had watched was for scraping static sites, but I eventually discovered that I needed to use a headless browser (Puppeteer)
+                      to mimic human interaction with the site. Using a headless browser, I could click on things, type, scroll, and wait for elements to 
+                      load. </p>
+                      <br>
+                <p>Then, I started writing down the classes for all of the elements that I wanted to interact with. I ran into an issue with this approach, however, when I
+                     tried to run my code and found that DoorDash had some kind of anti-scraping measure in place that scrambled class names when it sensed scraping. This 
+                    made the whole process more tedious because for every element I wanted to interact with, I had to <strong>a)</strong> 
+                    find distinctive features that I could select for, or <strong>b)</strong> find a distinctive neighbor/parent/child and 
+                    traverse the DOM. Unfortunately, because I had to do it this way, my current scraper would fall apart as soon as any DoorDash
+                     engineer decides to add or remove a div (which actually did happen while I was scraping).</p>
+
             </section>
             
             <section id='machine-learning'>

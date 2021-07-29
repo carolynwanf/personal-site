@@ -6,6 +6,7 @@ body {
   font-family:  "HelveticNeue-light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.2em;
   letter-spacing: 0.05em;
+  line-height: 1.5;
 
 }
 
@@ -34,7 +35,7 @@ figure {
   margin-left: 0;
   margin-right:0;
 }
-img.cat{
+.big-image{
   border-radius: 10px;
   width: 100%;
   align-content: center;
@@ -51,8 +52,8 @@ h1 {
 
 
 
-h1, h2 {
-  
+h1, h2{
+  margin-block-end: 0.3em;
   font-weight: 500;
   letter-spacing: 0.15em;
   color:rgb(96, 162, 190);
@@ -65,7 +66,7 @@ h1, h2 {
 }
 
 figcaption {
-  font-size: 0.8em
+  font-size: 0.7em
 }
 
 /* buttons */
@@ -147,11 +148,18 @@ a{
   align-content: left;
   color:rgb(96, 162, 190);
   text-shadow: 0px 1px white;
-  margin: 0.5em;
+
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .quick-link:hover {
   color: rgb(0, 54, 63)
+}
+
+.quick-link:active {
+  color: rgb(0, 54, 63);
 }
 
 .menu {
@@ -162,4 +170,84 @@ a{
 .box{
   height:1em;
   width:100%
+}
+
+/* overview */
+
+.overview {
+  font-size: 0.75em;
+  display: flex;
+}
+
+.overview-subtitle {
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+.column {
+  width: 50%;
+}
+
+.subcategory-left {
+  margin-top: 1em;
+  margin-right: 1em;
+
+}
+.subcategory-right {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.summary {
+  margin-top: 10px;
+  margin-bottom: 2em;;
+  color:rgb(190, 150, 30);
+  line-height: 1.5;
+
+  border-radius: 10px;
+
+  
+  padding: 1em;
+  align-content: center;
+  background-color:rgb(255, 250, 235);
+  display:block;
+ 
+  width: 95%;
+
+}
+
+.summary p {
+  color: rgb(151,166,133);
+
+  font-size: 1.1em;
+  margin-top: 10px;
+ 
+  text-shadow: 1px 1px white, -1px -1px rgb(252, 220, 124);
+
+}
+
+.contents{
+  margin-top: 2em;
+  
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contents p {
+  margin-top: 0.5em;
+
+  letter-spacing: 0.15em;
+  color:rgb(18, 100, 136);
+  text-shadow: 
+              -1px 1px rgb(96, 162, 190);
+}
+
+.small-link {
+  text-decoration: underline;
+  color:rgb(0, 54, 63)
 }
