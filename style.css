@@ -1,15 +1,23 @@
 
 body {
-  
-  background-color: rgb(203, 237, 252);
-  color: rgb(0, 54, 63);
+  /* position: fixed; */
+
+  background-color: #cfebf6;
+  color: #0b3682;
   font-family:  "HelveticNeue-light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.2em;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
 
 }
 
+footer{
+  height: 4em;
+}
+
+ul {
+  padding-left: 1em;
+}
 section {
   margin-bottom: 3em;
 }
@@ -25,6 +33,7 @@ main {
   margin: 20px auto;
   display: block;
   max-width: 600px;
+ 
 }
 
 /* .cat-wrapper {
@@ -39,8 +48,10 @@ figure {
   border-radius: 10px;
   width: 100%;
   align-content: center;
+  border: #0b3682 solid 2px;
+  box-shadow:  -4px 4px #f7c2c6, 4px -4px #ffffff;
 
-
+/* #4fcfa5 */
 
 }
 
@@ -56,16 +67,17 @@ h1, h2{
   margin-block-end: 0.3em;
   font-weight: 500;
   letter-spacing: 0.15em;
-  color:rgb(96, 162, 190);
+  color:#5294e0;
   text-shadow: 
-              -1px 1px rgb(18, 100, 136),
-              -2px 2px rgb(18, 100, 136);
+              -1px 1px #0b3682,
+              -2px 2px #0b3682;
               /* -3px 3px rgb(18, 100, 136),
               -4px 4px rgb(18, 100, 136), */
               /* -4px 2px rgb(114, 157, 175); */
 }
 
 figcaption {
+  margin-top: 0.4em;
   font-size: 0.7em
 }
 
@@ -80,36 +92,26 @@ a{
 
 #project {
   margin: 10px auto;
-  color:rgb(190, 150, 30);
+  color:#0b3682;
   line-height: 1.5;
-
-  border-radius: 10px;
-
-  
+  border-radius: 5px;
   padding: 1em;
   align-content: center;
-  background-color:rgb(255, 250, 235);
+  background-color:rgb(255, 255, 255);
   display:block;
- 
   width: 90%;
-  
-  box-shadow:
-  1px -1px white,
-              -1px 1px rgb(252, 220, 124),
-              -2px 2px rgb(252, 220, 124),
-              -3px 3px rgb(252, 220, 124),
-              -4px 4px rgb(252, 220, 124),
-             
-              -10px 10px 5px rgb(175, 211, 226);
+  border: #0b3682 2px solid;
+  box-shadow: -1px 1px  #0b3682, -2px 2px  #0b3682, -3px 3px  #0b3682, -4px 4px  #0b3682, 4px -4px #f7c2c6, -7px 5px #93b6c4;
+            
 
 }
 
 .project-image {
-  box-shadow:
+  /* box-shadow:
   -2px 2px 2px rgb(224, 216, 192),
   2px 2px 2px rgb(224, 216, 192),
   2px -2px 2px rgb(224, 216, 192),
-  -2px -2px 2px rgb(224, 216, 192);
+  -2px -2px 2px rgb(224, 216, 192); */
  
              
             
@@ -119,57 +121,68 @@ a{
   width: 100%;
 }
 
-.project-image-transparent {
-
-  border-radius: 5px;
-  margin-top: 1em;
-  width: 100%;
-}
-
 #project:hover{
-  margin-left: 5px;
-  border-width: 5px;
-  border-color: rgb(252, 220, 124);
+  position: relative;
+  top: 4px;
+  right: 4px;
+  
+  
 
   
-  box-shadow: none;
+  box-shadow: 2px -2px #93b6c4, -2px -2px #93b6c4, -2px 2px #93b6c4, 2px 2px #93b6c4;
 }
 
 .project-header {
-  color: rgb(151,166,133);
+  color: #5294e0;
   text-transform: uppercase;
   font-size: 1.1em;
   margin-bottom: 3px;
-  text-shadow: 1px 1px white, -1px -1px rgb(252, 220, 124);
+  text-shadow:  -1px 1px #0b3682, -2px 1px #0b3682;
+  letter-spacing: 0.06em;
 }
 
-/* quick links */
-.quick-link {
-  align-content: left;
-  color:rgb(96, 162, 190);
-  text-shadow: 0px 1px white;
+/* quick links/nav box */
 
-  margin-right: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.navbox {
+  position: fixed;
+  left: 2em;
+  top: 1.5em;
+  margin: 0px;
+  padding: 1em;
+  background-color: #f7c2c6;
+  border:#0b3682 solid 2px;
+  border-radius: 5px;
+  box-shadow: -4px 4px  #5294e0, 4px -4px #ffffff;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbox {
+    display: none;
+  }
+}
+
+.quick-link {
+  text-transform: lowercase;
+
+  color:#0b3682;
+  /* text-shadow: 0px 1px rgb(255, 255, 255); */
+}
+
+.quick-link-div {
+  margin: 0.5em;
 }
 
 .quick-link:hover {
-  color: rgb(0, 54, 63)
+  color: 
+  #f7c2c6;
+  text-shadow: -1px 1px #0b3682, 0.5px -0.5px white;
+  position: relative;
+  bottom: 2px;
+  left: 2px;
 }
 
 .quick-link:active {
-  color: rgb(0, 54, 63);
-}
-
-.menu {
-  float:right;
-  
-}
-
-.box{
-  height:1em;
-  width:100%
+  color:rgb(129, 102, 21);
 }
 
 /* overview */
@@ -199,8 +212,12 @@ a{
   margin-left: 1em;
 }
 
+/* summary */
+
+
+
 .summary {
-  margin-top: 10px;
+  margin-top: 1em;
   margin-bottom: 2em;;
   color:rgb(190, 150, 30);
   line-height: 1.5;
@@ -232,12 +249,6 @@ a{
   
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .contents p {
   margin-top: 0.5em;
 
@@ -251,3 +262,4 @@ a{
   text-decoration: underline;
   color:rgb(0, 54, 63)
 }
+

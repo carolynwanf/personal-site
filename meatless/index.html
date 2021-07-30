@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <html>  
+   
     <body>
         
             
-        
+        <div class ='navbox'>
+            <div class='quick-link-div'><a class='quick-link' href='#web-scraping'>Scraping</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#machine-learning'>ML</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#figma'>Figma</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#flutter'>Flutter</a></div>
+        </div>
         <main>
+        </div>
             <h1>Meatless</h1>
             <figure>
                 <img class='big-image' src='../public/meatless-icon.png' alt='picture of meatless mock-up'/>
@@ -55,19 +62,7 @@
             <!-- sections -->
            
            
-                <div class='contents'>
-                    <p>skip to: </p>
-                    <div class ='row'>
-                        <a class='quick-link' href='#web-scraping'>Scraping</a>
-                
-                        <a class='quick-link' href='#machine-learning'>ML</a>
-                      
-                        <a class='quick-link' href='#figma'>Figma</a>
-                        
-                        <a class='quick-link' href='#flutter'>Flutter</a>
-                    </div>
-                   
-                </div>
+               
     
             
             <section id='web-scraping'>
@@ -100,12 +95,17 @@
                     find distinctive features that I could select for, or <strong>b)</strong> find a distinctive neighbor/parent/child and 
                     traverse the DOM. Unfortunately, because I had to do it this way, my current scraper would fall apart as soon as any DoorDash
                      engineer decides to add or remove a div (which actually did happen while I was scraping).</p>
+                <br>
+                <p>After a few weeks, I ended up with a database of 1,100+ restaurants and 60,000+ dishes, all ready to be classified.</p>
 
             </section>
             
             <section id='machine-learning'>
-                
                 <h2>A not-so-brief venture into ML</h2>
+                <div class='summary'>
+                    <p class='summary-header'>Quick summary on why I decided to not use ML:</p>
+                    <p> I did a lot of testing with different kinds of ML models including bootstrapped models, logistic regression models, and neural networds, but all of them underperformed my brute force algorithm. My brute force algorithm works as follows: it checks if a dish's name or description contains a meat word. If it does, it's not vegetarian. If it does but it also has a word like "impossible" or "beyond", it is vegetarian. If a dish passes this first test, the algorithm then checks if the required number of requirements does not contain a meat word.</p>
+                </div>
                 <p></p>
                
             </section>
