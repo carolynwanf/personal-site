@@ -7,7 +7,7 @@ body {
   font-family:  "HelveticNeue-light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.2em;
   letter-spacing: 0.025em;
-  line-height: 1.25;
+  line-height: 1.4;
 
 }
 
@@ -15,7 +15,7 @@ footer{
   height: 4em;
 }
 
-ul {
+ul, ol {
   padding-left: 1em;
 }
 section {
@@ -101,7 +101,9 @@ a{
   display:block;
   width: 90%;
   border: #0b3682 2px solid;
-  box-shadow: -1px 1px  #0b3682, -2px 2px  #0b3682, -3px 3px  #0b3682, -4px 4px  #0b3682, 4px -4px #f7c2c6, -7px 5px #93b6c4;
+  /* box-shadow: -1px 1px  #0b3682, -2px 2px  #0b3682, -3px 3px  #0b3682, -4px 4px  #0b3682, 3px -3px #f7c2c6, -7px 5px #93b6c4; */
+
+  box-shadow: -1px 1px  #0b3682, -2px 2px  #0b3682, -3px 3px  #0b3682, -4px 4px  #0b3682, -5px 5px  #0b3682, 3px -3px #f7c2c6, -9px 5px #93b6c4;
             
 
 }
@@ -164,8 +166,10 @@ a{
 .quick-link {
   text-transform: lowercase;
 
-  color:#0b3682;
-  /* text-shadow: 0px 1px rgb(255, 255, 255); */
+  color: #0b3682;
+
+  /* color:#e6737c; */
+  text-shadow: 0px 1px rgb(255, 255, 255);
 }
 
 .quick-link-div {
@@ -173,9 +177,6 @@ a{
 }
 
 .quick-link:hover {
-  color: 
-  #f7c2c6;
-  text-shadow: -1px 1px #0b3682, 0.5px -0.5px white;
   position: relative;
   bottom: 2px;
   left: 2px;
@@ -219,28 +220,28 @@ a{
 .summary {
   margin-top: 1em;
   margin-bottom: 2em;;
-  color:rgb(190, 150, 30);
+  color:#0b3682;
   line-height: 1.5;
-
   border-radius: 10px;
-
-  
   padding: 1em;
-  align-content: center;
-  background-color:rgb(255, 250, 235);
+
+  background-color:rgb(255, 255, 255);
   display:block;
  
   width: 95%;
+  
+  border: #0b3682 2px solid;
+  box-shadow: -4px 4px  #5294e0, 4px -4px #f7c2c6; 
 
 }
 
-.summary p {
-  color: rgb(151,166,133);
-
+.summary-header {
+  color: #5294e0;
   font-size: 1.1em;
-  margin-top: 10px;
- 
-  text-shadow: 1px 1px white, -1px -1px rgb(252, 220, 124);
+  margin-top: 0.5em;
+  margin-bottom: 3px;
+  text-shadow:  -1px 1px #0b3682, -2px 1px #0b3682;
+  letter-spacing: 0.06em;
 
 }
 
