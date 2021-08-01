@@ -1,0 +1,77 @@
+/* strawberry shortcake ingredients */
+.words-and-circles {
+    display:flex;
+    align-items: flex-start;
+  }
+  .ingredients {
+    margin-top: 1em;
+    display:block;
+    width: 15%;
+    margin-left: 5%;
+  }
+  
+  .cream {
+    margin-bottom: 2.5em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #f7f6c2;
+    /* border: #0b3682 2px solid; */
+    height: 3em;
+    width: 3em;
+    border-radius: 1.8em;
+    box-shadow: -1px 1px#ffffff, -2px 2px#a8a759, -3px 3px#a8a759, -4px 4px#a8a759, 1px 0px white, -7px 4px #93b6c4;
+  }
+  
+  .strawberries {
+    margin-bottom: 2.5em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #f8707b;
+    /* border: #0b3682 2px solid; */
+    height: 2em;
+    width: 2em;
+    border-radius: 1.2em;
+    box-shadow: -1px 1px #f7c2c6, -2px 2px #b63c46, -3px 3px#b63c46, 1px 0px #f7c2c6, -6px 4px #93b6c4;
+  
+  }
+  
+  .flour {
+    margin-bottom: 2.5em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#ffffff;
+    /* border: #0b3682 2px solid; */
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.9em;
+    box-shadow: -1px 1px #f7f6c2, -2px 2px #628492, -3px 3px#628492, 1px 0px #f7f6c2, -6px 4px #93b6c4;
+  }
+  
+  .sugar {
+    margin-bottom: 2.5em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #ffffff;
+    /* border: #0b3682 2px solid; */
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 0.8em;
+    box-shadow: -0.5px 0.5px #f7f6c2, -1px 1px #628492, -1.5px 1.5px#628492, 0.5px 0px #f7f6c2, -3px 2px #93b6c4;
+  
+  }
+  
+  .vanilla {
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#a77b2a;
+    /* border: #0b3682 2px solid; */
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: -0.5px 0.5px #f0c36f, -1px 1px #704f12, -1.5px 1.5px#704f12, 0.5px 0px #f0c36f, -3px 2px #93b6c4;
+  
+  }
+  
+  .shortcake-figure {
+    margin-top: 0;
+  }

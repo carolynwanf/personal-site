@@ -1,0 +1,129 @@
+.words-and-circles {
+    display:flex;
+    align-items: flex-start;
+  }
+.ingredients {
+    margin-top: 1em;
+    display:block;
+    width: 15%;
+    margin-left: 5%;
+}
+
+.butter {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #f8e89f;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.7em;
+    box-shadow: -1px 1px#ffffff, -2px 2px#bda84e, -3px 3px#bda84e, 1px 0px white, -6px 4px #93b6c4;
+}
+
+.sugar {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #ffffff;
+    /* border: #0b3682 2px solid; */
+    height: 2.8em;
+    width: 2.8em;
+    border-radius: 1.5em;
+    box-shadow: -1px 1px #f7f6c2, -2px 2px #628492, -3px 3px#628492, -4px 4px#628492, 1px 0px #f7f6c2, -8px 4px #93b6c4;
+  
+}
+
+.cocoa {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#6e4f16;
+    /* border: #0b3682 2px solid; */
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 1em;
+    box-shadow: -1px 1px #b18432, -2px 2px #352403, -3px 3px#352403, 1px 0px #b18432, -6px 4px #93b6c4;
+  
+}
+
+.salt {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: #ffffff;
+    /* border: #0b3682 2px solid; */
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.3em;
+    box-shadow: -0.5px 0.5px #f7f6c2, -1px 1px #628492, -1.5px 1.5px#628492, 0.5px 0px #f7f6c2, -3px 2px #93b6c4;
+}
+
+.vanilla {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#a77b2a;
+    /* border: #0b3682 2px solid; */
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 0.7em;
+    box-shadow: -0.5px 0.5px #f0c36f, -1px 1px #704f12, -1.5px 1.5px#704f12, 0.5px 0px #f0c36f, -3px 2px #93b6c4;
+  
+}
+
+.eggs {
+    padding:0.1em;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#e7f4fa;
+    height: 1.7em;
+    width: 1.7em;
+    border-radius: 0.9em;
+    box-shadow: -1px 1px #ffffff, -2px 2px #628492, -3px 3px#628492, 1px 0px #ffffff, -6px 4px #93b6c4;
+}
+
+.yolk {
+    opacity: 100%;
+    margin-top: 0.2em;
+    margin-left: 0.4em;
+    background-color: #f59d4b;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 0.3em;
+    box-shadow: -0.5px 0.5px#e06a25, 0.5px 0px #f8da76;
+}
+
+.yolk-2 {
+    margin-left: 0.9em;
+}
+
+
+  
+.flour {
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#ffffff;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.9em;
+    box-shadow: -1px 1px #f7f6c2, -2px 2px #628492, -3px 3px#628492,  1px 0px #f7f6c2, -6px 4px #93b6c4;
+}
+
+.flaky {
+    margin-right: auto;
+    margin-left: 0;
+    background-color:#ffffff;
+    height: 0.5em;
+    width: 0.5em;
+    box-shadow: -1px 1px #f7f6c2, -2px 2px #628492, -3px 3px#628492, 1px 0px #f7f6c2, -6px 4px #93b6c4;
+}
+  
+
+  
+
+  
+.shortcake-figure {
+    margin-top: 0;
+}
