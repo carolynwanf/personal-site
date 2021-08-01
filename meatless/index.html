@@ -55,21 +55,16 @@
                     </div>
                     <div class='subcategory-right'>
                         <p class='overview-subtitle'>The final product: </p>
-                        <p>A native app that allows you to search for restaurants and menu items by zip code, sort restaurants by number of vegetarian dishes or the ratio of vegetarian main dishes to all main dishes, search for specific items/kinds of items within results, star menu items you’re interested in, submit reviews and ratings for menu items, and report items that contain meat.</p>
+                        <p>A native app that allows you to search for restaurants and menu items by zip code, sort restaurants by number of vegetarian dishes or the ratio of vegetarian main dishes to all main dishes, search for specific dishes within results, star dishes you’re interested in, submit reviews and ratings for dishes, and report dishes that contain meat.</p>
                     </div>
                 </div>
             </div>
-            <!-- sections -->
-           
-           
-               
-    
-            
+            <!-- sections -->       
             <section id='web-scraping'>
                 <h2>Scraping DoorDash (it's not not allowed)</h2>
                 
                 <div class='summary'>
-                    <video class='big-image' loop autoplay muted controls>
+                    <video class='fill' loop autoplay muted controls>
                         <source src='../public/scraping-clip.mov'>
                     </video>
                     <p class='summary-header'>How the scraper works:</p>
@@ -78,23 +73,23 @@
                         <li> Navigate to DoorDash's website.</li>
                         <li> Click into every food category and scroll down to scrape links until you can’t scroll anymore.</li>
                         <li> Remove duplicate links.</li>
-                        <li> Navigate to each link and click into each dish one by one to scrape its name, images, description, and ordering requirements. Write this information into a MongoDB database.</li>
+                        <li> Navigate to each link and click into each dish one by one to scrape its name, images, description, and ordering requirements. Write this information to a MongoDB database.</li>
                     
                     </ol>
                 </div>
-                <p>I scraped DoorDash for restaurant information because a lot of restaurants had moved onto the platform during the pandemic. 
-                    It’s also the most widely used food delivery app in the US. It was a bit difficult to get started because DoorDash 
+                <p>I scraped DoorDash for restaurant information because a lot of restaurants had moved onto the platform during the pandemic, and 
+                    it’s also the most widely used food delivery app in the US. It was a bit difficult to get started because DoorDash 
                     has a dynamic website (html/css for the site are changed by code running in the browser/on the server), and the tutorial
                      I had watched was for scraping static sites, but I eventually discovered that I needed to use a headless browser (Puppeteer)
-                      to mimic human interaction with the site. Using a headless browser, I could click on things, type, scroll, and wait for elements to 
-                      load. </p>
+                      to mimic human interaction with the site. Using a headless browser, I could imitate actions like clicking on things, typing, scrolling, waiting for elements to 
+                      load, and running code in the browser console. </p>
                       <br>
-                <p>Then, I started writing down the classes for all of the elements that I wanted to interact with. I ran into an issue with this approach, however, when I
-                     tried to run my code and found that DoorDash had some kind of anti-scraping measure in place that scrambled class names when it sensed scraping. This 
-                    made the whole process more tedious because for every element I wanted to interact with, I had to <strong>a)</strong> 
+                <p> Another big issue I ran into was with selecting the elements I wanted to interact with. When I first tried to run my code that targeted
+                    the website's gibberish class names, I found that DoorDash an anti-scraping measure in place that scrambled class names when it sensed scraping. 
+                    This made the whole process more tedious because for every element I wanted to interact with, I had to <strong>a)</strong> 
                     find distinctive features that I could select for, or <strong>b)</strong> find a distinctive neighbor/parent/child and 
-                    traverse the DOM. Unfortunately, because I had to do it this way, my current scraper would fall apart as soon as any DoorDash
-                     engineer decides to add or remove a div (which actually did happen while I was scraping).</p>
+                    traverse the DOM. Unfortunately, because I had to do it this way, my current scraper would fall apart as soon as any DoorDash 
+                    engineer decides to add or remove a div from their element tree (which actually did happen while I was scraping).</p>
                 <br>
                 <p>After a few weeks, I ended up with a database of 1,100+ restaurants and 60,000+ dishes, all ready to be classified.</p>
 
@@ -103,16 +98,94 @@
             <section id='machine-learning'>
                 <h2>A not-so-brief venture into ML</h2>
                 <div class='summary'>
-                    <p class='summary-header'>Quick summary on why I decided to not use ML:</p>
-                    <p> I did a lot of testing with different kinds of ML models including bootstrapped models, logistic regression models, and neural networds, but all of them underperformed my brute force algorithm. My brute force algorithm works as follows: it checks if a dish's name or description contains a meat word. If it does, it's not vegetarian. If it does but it also has a word like "impossible" or "beyond", it is vegetarian. If a dish passes this first test, the algorithm then checks if the required number of requirements does not contain a meat word.</p>
+                    <p class='summary-header'>TL;DR</p>
+                    <p>I tried and it wasn't as good as my brute force algorithm :(( The brute force algorithm works like this:</p>
+                    <ol>
+                        <li>Check if a dish's name or description contains a meat word. If yes, it's <strong>not vegetarian</strong>. If yes, but it also has a word like "impossible" or 
+                            "beyond", go to step two. If no, go to step two.</li>
+                        <li>Check if the requirements can be fulfilled with vegetarian options. If yes, it's <strong>vegetarian</strong>. If no, it's <strong>not vegetarian</strong>.</li>    
+                    </ol>
                 </div>
-                <p></p>
+                <p>I did some initial Googling and discovered that the kind of problem I wanted to solve was called a binary classification problem. 
+                I wanted an algorithm that took in the name, description, and requirements of a dish and returned whether or not it was vegetarian. 
+                Before I could even get started with models, however, I had to prepare my training and testing data. I created strings for 2,500 
+                dishes consisting of their name, description, and requirements, before labelling and spliting them into testing and training sets 
+                (20/80, based on the Pareto principle).</p>
+                <br>
+                <p>I then trained and tested logistic regression models, neural networks, and Bayes classifiers. 
+                Immediately, I was able to rule out the Bayes classifier because its results were only 10% better than guessing. I'm not sure why, 
+                but I think it may be because the Bayes classifier assumes conditional independence of the features (in this case, words), of an instance (dish string), 
+                which did not hold for this case. The other two models were slightly underperformed my brute force algorithm in terms of accuracy 
+                given a dish was vegetarian and overall accuracy, and to make sure they would underperform consistently I trained 100 more of each 
+                model on different 20/80 divisions of data and calculated the average result.</p>
                
             </section>
             <section id='figma'>
+                <h2>Prototyping with Figma and testing out my UI with friends</h2>
+                <p>While building the <a class='small-link' href='https://www.figma.com/file/aYSBjmEcBOwD2dlwTUQ1hw/Meatless?node-id=108%3A600'>prototype</a>, I struggled with balancing the features I wanted with the features I knew were realistic. 
+                    I ended up prototyping my ideal version and cutting features during production. Here are the features I prototyped:</p>
+                <ol>
+                    <li>A landing page for entering your address.</li>
+                    <figure>
+                        <div class='images'>
+                            <img class='web-image' src='../public/meatless-icon.png'/> <img class="mobile-image" src='../public/landing-figma-mobile.png'/>
+                        </div>
+                    </figure>
+                    
+                    <li>A restaurants page for returning restaurants near you. On this page, each restaurant has a card that contains their 
+                        vegetarian friendliness rating (ratio of vegetarian main dishes to all main dishes), a brief description of their 
+                        food, their rating (the average rating of all the main dishes divided by the number of main dishes), their distance 
+                        from your current location, their hours, and the number of mains, sides, and desserts they offered. On this page, 
+                        people would have the ability to sort results, search within results, and filter results by hours.</li>
+                    <figure>
+                       <div class='images'> <img class='web-image'src='../public/restaurants-figma.png'/>
+                        <img class="mobile-image" src='../public/restaurants-figma-mobile.png'/></div>
+                    </figure>
+                    <li>A detail page for each restaurant that lists the vegetarian mains, sides, and desserts they have available.</li> 
+                    <figure>
+                        <div class='images'>
+                            <img class='web-image' src='../public/restaurant-page-figma.png'/>
+                            <img class='mobile-image' src='../public/restaurant-figma-mobile.png'/>
+                        </div>
+                    </figure>  
+                    <li>A dishes page for returning dishes near you. On this page, each dish has a card with its name, description, restaurant, 
+                        distance from your current location, hours, rating, reviews, and price. Each card also has a pin icon used for pinning 
+                        dishes you're interested in. On this page, people would have the ability to sort results, search within results, and filter results by hours.</li>
+                      
+                    <figure>
+                        <div class='images'>
+                            <div class="AHH"> <img src='../public/dishes-pins-figma.png'/><figcaption>Dishes with the pins bar open on the side</figcaption></div>
+                               
+                            
+             
+                            <img class='mobile-image' src='../public/dishes-figma-mobile.png'/>
+                        </div>
+                       
+                        
+                    </figure>
+                    <li>A detail page for each dish that has the same information as the dish card, expanded reviews, a form to leave a review, 
+                        and a form to report the dish for containing meat.</li>
+                    <figure>
+                        <div class='images'>
+                            <img class='web-image' src='../public/item-dialog.png'/>
+                            <img class='mobile-image' src='../public/item-figma-mobile.png'/>
+                        </div>
+                       
+                    </figure>  
+                    
+                </ol>
                 
-                <h2>Prototyping with Figma and conducting testing with friends</h2>
-                <p></p>
+                <p>Once the prototype was ready, I tested it with four of my friends and got their opinions on the mobile and web interfaces. The individual interview takeaways are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
+                <div class='summary'>
+                    <p class='summary-header'>Big takeaways from UI testing:</p>
+                    <ol>
+                        <li>The images on the dishes page made the entire site more attractive (and make everyone hungry).</li>
+                        <li>The meaning of the pie charts on the restaurant page is not immediately clear, but becomes clear after prolonged interaction with the site.</li>
+                        <li>Colors should be kept to a minimum to enhance the images of food</li>
+                        <li>There is a strong desire for more filters (e.g. cuisines, food allergies)</li>        
+                    </ol>
+                </div>
+                
             </section>
             <section id='flutter'>
                 <h2>

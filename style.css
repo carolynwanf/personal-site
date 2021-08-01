@@ -126,6 +126,11 @@ a{
   width: 100%;
 }
 
+.fill {
+  border-radius: 5px;
+  width: 100%;
+}
+
 #project:hover{
   position: relative;
   top: 4px;
@@ -265,6 +270,26 @@ a{
 .small-link {
   text-decoration: underline;
   color:rgb(0, 54, 63)
+}
+
+/* meatless images */
+
+.images {
+  display: flex;
+  align-items: flex-start;
+}
+
+.web-image {
+  width: 67.5%;
+  margin-right: 2.5%
+}
+.AHH {
+  width: 67.5%;
+  margin-right: 2.5%;
+}
+
+.mobile-image{
+  width: 30%;
 }
 
 
