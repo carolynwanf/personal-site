@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
    
     <link rel="stylesheet" href="../style.css">
+    <script src='mobile-or-web.js'></script>
 </head>
 <html>  
    
@@ -21,7 +22,8 @@
         </div>
             <h1>Meatless</h1>
             <figure>
-                <img class='big-image' src='../public/meatless-icon.png' alt='picture of meatless mock-up'/>
+                <img class='web-image' src='../public/meatless-icon.png' alt='picture of meatless mock-up'/>
+                <img class='mobile-image' src='../public/landing-figma-mobile.png' alt='picture of meatless mock-up'/>
                 <figcaption>Meatless's landing page</figcaption>
             </figure>
             <!-- overview -->
@@ -125,8 +127,11 @@
                 <h2>Prototyping with Figma and testing out my UI with friends</h2>
                 <p>While building the <a class='small-link' href='https://www.figma.com/file/aYSBjmEcBOwD2dlwTUQ1hw/Meatless?node-id=108%3A600'>prototype</a>, I struggled with balancing the features I wanted with the features I knew were realistic. 
                     I ended up prototyping my ideal version and cutting features during production. Here are the features I prototyped:</p>
+                    <div class='toggle-div'>
+                        <button class='toggle-button' onclick='changeDisplay()'><p class='mobile-name'>mobile</p><p class='web-name'>web</p></button>
+                    </div>
                 <ol>
-                    <li>A landing page for entering your address.</li>
+                    <li class='needs-top-margin'>A landing page for entering your address.</li>
                     <figure>
                         <div class='images'>
                             <img class='web-image' src='../public/meatless-icon.png'/> <img class="mobile-image" src='../public/landing-figma-mobile.png'/>
@@ -155,10 +160,7 @@
                       
                     <figure>
                         <div class='images'>
-                            <div class="AHH"> <img src='../public/dishes-pins-figma.png'/><figcaption>Dishes with the pins bar open on the side</figcaption></div>
-                               
-                            
-             
+                            <img class='web-image' src='../public/dishes-pins-figma.png'/>
                             <img class='mobile-image' src='../public/dishes-figma-mobile.png'/>
                         </div>
                        
@@ -176,7 +178,9 @@
                     
                 </ol>
                 
-                <p>Once the prototype was ready, I tested it with three of my friends and got their opinions on the mobile and web interfaces. The individual interview takeaways are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
+                <p>Once the prototype was ready, I asked three of my friends to interact with the prototypes and say their thoughts out loud while 
+                    I took notes. I tried to provide as little direction as possible so I could see which features were confusing and which were intuitive. 
+                    The individual interview notes are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
                 <div class='summary'>
                     <p class='summary-header'>Big takeaways from UI testing:</p>
                     <ol>

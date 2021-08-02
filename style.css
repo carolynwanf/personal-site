@@ -169,6 +169,8 @@ a{
   .navbox {
     display: none;
   }
+
+  
 }
 
 .quick-link {
@@ -280,16 +282,64 @@ a{
 }
 
 .web-image {
-  width: 67.5%;
-  margin-right: 2.5%
+  border: #0b3682 solid 2px;
+  box-shadow:  -4px 4px #f7c2c6, 4px -4px #ffffff;
+  display: block;
+  width: 100%;
 }
-.AHH {
+/* .AHH {
   width: 67.5%;
   margin-right: 2.5%;
-}
+} */
 
 .mobile-image{
-  width: 30%;
+  border: #0b3682 solid 2px;
+  box-shadow:  -4px 4px #f7c2c6, 4px -4px #ffffff;
+  display: none;
+  width: 50%;
+}
+
+/* toggle button */
+
+.mobile-name {
+  display: block;
+}
+
+.web-name {
+  display: none;
+}
+
+.toggle-button {
+  border: solid 2px #0b3682;
+  border-radius: 5px;
+  color: #0b3682;
+  background-color: #f7c2c6;
+  padding: 1em;
+  position: fixed;
+  top: 2em;
+  margin-left: 48em;
+  
+}
+
+.toggle-div {
+  height:0em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .toggle-button {
+    position: absolute;
+    top:unset;
+    margin-left: 0;
+    margin: 1em;
+    
+  }
+
+  .toggle-div {
+    height:2em;
+  }
+  
+
+  
 }
 
 
