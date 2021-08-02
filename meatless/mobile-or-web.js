@@ -2,17 +2,17 @@ function changeDisplay() {
     const display = document.querySelector("[class='web-image']").style.display;
     var mobileImages = document.querySelectorAll("[class='mobile-image']"),
     webImages = document.querySelectorAll("[class='web-image']"), 
-    webName = document.querySelector("[class='web-name']"),
-    mobileName = document.querySelector("[class='mobile-name']"),
-    toggleButton = document.querySelector("[class='toggle-button']");
-
+    webName = document.querySelector("[class='toggle-web-div']"),
+    mobileName = document.querySelector("[class='toggle-mobile-div']");
+   
+    console.log(webName, mobileName)
 
     if (display == 'none') {
 
         webName.style.display= 'none';
         mobileName.style.display= 'block';
 
-        fadeIn(toggleButton)
+        fadeIn(mobileName)
         
         console.log(display)
         for (let i=0; i<mobileImages.length;i++) {
@@ -28,7 +28,7 @@ function changeDisplay() {
         webName.style.display= 'block';
        
 
-        fadeIn(toggleButton);
+        fadeIn(webName);
 
         for (let i=0; i<mobileImages.length;i++) {
             webImages[i].style.display = 'none';

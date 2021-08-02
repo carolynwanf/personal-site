@@ -301,41 +301,96 @@ a{
 
 /* toggle button */
 
-.mobile-name {
-  display: block;
-}
 
-.web-name {
-  display: none;
-}
 
-.toggle-button {
+.toggle-button-mobile {
+  padding: 3em 0.5em;
+  cursor: pointer;
+  
   border: solid 2px #0b3682;
-  border-radius: 5px;
+  border-radius: 15px;
   color: #0b3682;
-  background-color: #f7c2c6;
-  padding: 1em;
+  text-shadow: 0px 0.5px white;
+  background-color: #74aff1;
+  /* padding: 1em; */
   position: fixed;
   top: 2em;
   margin-left: 48em;
+  box-shadow: -1px 1px #0b3682, -2px 2px #0b3682, -3px 3px #0b3682, -4px 4px #0b3682, 3px -3px #ffffff;
   
 }
 
-.toggle-div {
+
+button:hover {
+  margin-top: 0.5em;
+  margin-left: 47.7em;
+  /* position: relative; */
+  /* right: 4px;
+  top: 4px; */
+  box-shadow: none;
+  box-shadow: 2px -2px #93b6c4, -2px -2px #93b6c4, -2px 2px #93b6c4, 2px 2px #93b6c4;
+
+}
+
+.button-text {
+  font-size: 1em;
+  font-weight:500;
+}
+
+.toggle-button-web {
+  text-shadow: 0px 0.5px white;
+  padding: 1.5em 2.25em;
+  cursor: pointer;
+  border: solid 2px #0b3682;
+  border-radius: 7px;
+  color: #0b3682;
+  background-color: #74aff1;
+  position: fixed;
+  top: 2em;
+  margin-left: 48em;
+  box-shadow: -1px 1px #0b3682, -2px 2px #0b3682, -3px 3px #0b3682, -4px 4px #0b3682, 3px -3px #ffffff;
+  
+}
+
+.toggle-web-div {
+  display: none;
   height:0em;
 }
 
-@media only screen and (max-width: 1000px) {
-  .toggle-button {
+.toggle-mobile-div {
+  display: block;
+  height:0em;
+}
+
+@media only screen and (max-width: 900px) {
+  .toggle-button-mobile {
     position: absolute;
     top:unset;
-    margin-left: 0;
     margin: 1em;
     
   }
 
-  .toggle-div {
-    height:2em;
+  .toggle-button-web {
+    position: absolute;
+    top:unset;
+    margin: 1em;
+    
+  }
+
+  button:hover {
+   margin: 1em;
+    position: relative;
+    right: 4px;
+    top: 4px;
+    
+  
+  }
+
+  .toggle-mobile-div {
+    height:5em;
+  }
+  .toggle-web-div {
+    height:5em;
   }
   
 
