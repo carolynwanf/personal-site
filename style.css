@@ -282,6 +282,7 @@ a{
 }
 
 .web-image {
+  border-radius: 10px;
   border: #0b3682 solid 2px;
   box-shadow:  -4px 4px #f7c2c6, 4px -4px #ffffff;
   display: block;
@@ -293,10 +294,15 @@ a{
 } */
 
 .mobile-image{
+  border-radius: 10px;
   border: #0b3682 solid 2px;
   box-shadow:  -4px 4px #f7c2c6, 4px -4px #ffffff;
   display: none;
   width: 50%;
+}
+
+#phone {
+  border-radius: 40px;
 }
 
 /* toggle button */

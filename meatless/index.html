@@ -17,6 +17,8 @@
             <div class='quick-link-div'><a class='quick-link' href='#machine-learning'>ML</a></div>
             <div class='quick-link-div'><a class='quick-link' href='#figma'>Figma</a></div>
             <div class='quick-link-div'><a class='quick-link' href='#flutter'>Flutter</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#mistakes'>Mistakes</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#next'>Next</a></div>
         </div>
         <main>
         </div>
@@ -102,7 +104,7 @@
                 <h2>A not-so-brief venture into ML</h2>
                 <div class='summary'>
                     <p class='summary-header'>TL;DR</p>
-                    <p>I tried and it wasn't as good as my brute force algorithm :(( The brute force algorithm works like this:</p>
+                    <p>I tried and using ML classifiers and they weren't as good as my brute force algorithm :(( The brute force algorithm works like this:</p>
                     <ol>
                         <li>Check if a dish's name or description contains a meat word. If yes, it's <strong>not vegetarian</strong>. If yes, but it also has a word like "impossible" or 
                             "beyond", go to step two. If no, go to step two.</li>
@@ -173,7 +175,7 @@
                         and a form to report the dish for containing meat.</li>
                     <figure>
                         <div class='images'>
-                            <img class='web-image' src='../public/item-dialog.png'/>
+                            <img class='web-image' src='../public/item-dialog-figma.png'/>
                             <img class='mobile-image' src='../public/item-figma-mobile.png'/>
                         </div>
                        
@@ -181,9 +183,9 @@
                     
                 </ol>
                 
-                <p>Once the prototype was ready, I asked three of my friends to interact with the prototypes and say their thoughts out loud while 
-                    I took notes. I tried to provide as little direction as possible so I could see which features were confusing and which were intuitive. 
-                    The individual interview notes are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
+                <p>Once the prototype was ready, I asked three of my friends to interact with the it and say their thoughts out loud while 
+                    I took notes. I tried to provide as little direction as possible so that could I get a good gauge of which features were confusing and which ones were intuitive. 
+                    My notes from these sessions are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
                 <div class='summary'>
                     <p class='summary-header'>Big takeaways from UI testing:</p>
                     <ol>
@@ -197,10 +199,153 @@
             </section>
             <section id='flutter'>
                 <h2>
-                    Learning Flutter while freaking out about the fact that my app isn't as good as DoorDash
+                    Learning Flutter and developing my app!!
                 </h2>
-                <p></p>
+                <p>I decided to learn Flutter because I wanted my final app to run natively on iOS, Android, and the browser. I also wanted to see if my 
+                    experience with React would translate to other frontend frameworks. To my delight, it did! Flutter also has stateful and stateless class 
+                    components, the ability to set states and initiate re-renders, and built-in elements called widgets. Each kind of widget has its own specific 
+                    attributes (like an IconButton widget has a icon attribute to specify which icon you want to make into a button) that can be set when it's called.  </p>
+                    <br>
+                    <p>It was cool that Flutter had so many pre-built abstractions over 
+                    their simpler elements for developers to use (e.g. they have a horizontal line divider that's just a thin container element that you can set the height, width, and color of). 
+                    It felt like using React + React-Bootstrap on steroids.</p> 
+
+                    <br>
+
+                    <p>Here's what Meatless looks like now:</p>
+                    <ol>
+                        <li class='needs-top-margin'>The landing page:</li>
+                        <figure>
+                            <div class='images'>
+                                <img class='web-image' src='../public/landing-page.png'/> 
+                                
+                                <img class='mobile-image' id='phone' src='../public/landing-page-mobile.png'/>
+                            </div>
+                        </figure>
+                        
+                        <li>The restaurants page</li>
+                        <figure>
+                           <div class='images'> <img class='web-image'src='../public/restaurants.png'/>
+                            <img class='mobile-image' id='phone' src='../public/restaurants-mobile.png'/>
+                        </figure>
+                        <li>The detail page for a restaurant</li> 
+                        <figure>
+                            <div class='images'>
+                                <img class='web-image' src='../public/restaurant.png'/>
+                                <img class='mobile-image' id='phone' src='../public/restaurant-mobile.png'/>
+                            </div>
+                        </figure>  
+                        <li>The dishes page</li>
+                          
+                        <figure>
+                            <div class='images'>
+                                <img class='web-image' src='../public/dishes.png'/>
+                                <img class='mobile-image' id='phone' src='../public/dishes-mobile.png'/>
+                            </div>
+                           
+                            
+                        </figure>
+                        <li>The detail page for a dish</li>
+                        <figure>
+                            <div class='images'>
+                                <img class='web-image' src='../public/item-dialog.png'/>
+                                <img class='mobile-image' id='phone' src='../public/item-dialog-mobile.png'/>
+                            </div>
+                           
+                        </figure>  
+                        <li>Video click-through of the features</li>
+                        <figure>
+                            <video class='web-image' loop autoplay muted controls>
+                                <source src='../public/full-walkthrough.mov'>
+                            </video>
+                            <video class='mobile-image' id='phone' loop autoplay muted controls>
+                                <source src='../public/full-walkthrough-mobile.mov'>
+                            </video>
+                           
+                        </figure>  
+                        
+                        
+                    </ol>
+
+                
+                <br>
+
+                <p>I'm really proud that the current version of meatless is both responsive and adaptive! This means that it has layouts that change size depending on the screen size of a device and also
+                deals with the different inputs and expectations that come with different types of devices. For example, the number of restaurant cards in a row changes with 
+                the screen width, and once the screen is less than 500 pixels wide, it changes to a mobile interface with lower visual density and a one column list instead of a grid. 
+                Doing this required a lot of extra design and coding work, but I'm glad I did it! I was able to learn a lot more about Flutter and 
+                make an app that looks good on multiple device types as a result.</p>
+
+
+
+                <div class='summary'>
+                    <p class='summary-header'>Major changes from prototype to app:</p>
+                    <ol>
+                        <li>The pin icons were too busy-looking, so I changed them to stars.</li>
+                        <li>I realized that infinite scroll didn't make much sense for my use-case, so I made the restaurants and dishes displays paginated.</li>
+                        <li>Returning restaurants near an address was pretty difficult since I didn't have latitude or longitude information, so I made it so that you could enter a zipcode and find restaurants in that zipcode instead.</li>
+                        <li>Since all of my friends had been really attracted to the photos during the UI testing phase, I added photos to the restaurant cards on the restaurants page.</li>
+                        <li>I got rid of features that require users to be useful (reviews, ratings).</li>      
+                    </ol>
+                </div>
             </section>
+            <section id='mistakes'>
+                <h2>
+                    Mistakes I made (and learned from)
+                </h2>
+                
+                   <p>For a good part of this process, I was setting goals that would've only been doable if nothing I had built before broke, or if nothing new came up during the week. This meant 
+                        that when I had to do something urgently that wasn't a part of my goals for the week, I would get really stressed. 
+                   </p>
+
+                   <div class='summary'>
+                       <p class='summary-header'>What I learned: </p>
+                       <p>It's helpful for me to make two sets of weekly goals--what I want to get done in seven days and what I think I can get done in four days--and be okay with only completing the latter.</p>
+                       <br>
+                   </div>
+                    <p>I made about 90% of my Figma prototype rectangle by rectangle, text box by text box, no re-usable components, no layouts. In retrospect, I probably 
+                        should've realized something was wrong when I spent a day just adjusting the margins pixel by pixel on all 50 of my dish cards, but hey, hindsight is 20/20. 
+                        </p>
+                    <div class='summary'>
+                        <p class='summary-header'>What I learned: </p>
+                        <p>If it feels like a tool to make something easier exists, it probably does and it can't hurt to do some quick Googling/documentation reading 
+                            to look for it.</p>
+                            <br>
+                    </div>
+                    <p>I actually had to scrape the exact same content from DoorDash twice because the first time I only scraped the names, descriptions, 
+                        and requirements of dishes. I did this because I only wanted to scrape enough examples to create my training and testing data for 
+                        the ML phase, but this really back-fired on me because I 1) didn't have the information I needed for the app and 2) couldn't even 
+                        use the information I had to find the information I needed (restaurant information, dish images, etc). </p>
+                    <div class='summary'>
+                        <p class='summary-header'>What I learned: </p>
+                        <p>You can never 
+                            have too much data! Even if it's not structured efficiently in your database, you can always run a migration later. You can't 
+                            re-structure information you don't have.</p>
+                            <br>
+                    </div>
+                    <p>I made all of my Flutter components rely on each other for passing around information, specifically the starred status of dishes.
+                        While this might be fine for mobile apps, I realized this was an issue when I tried to route my web-app and found that components kept erroring 
+                        because when I routed to a new URL, they weren't able to inherit states from other components.</p>
+                    <div class='summary'>
+                        <p class='summary-header'>What I learned: </p>
+                        <p>For web-apps, it's probably 
+                            a good idea to pass information that needs to go to components at different URLs through the backend. This way, when a page re-loads, my components don't lose 
+                            their state because it's not all on the browser.</p>
+                            <br>
+                    </div>
+            
+            </section>
+        <section id='next'>
+            <h2>What's next?</h2>
+            <p>Next, I'd like to implement:</p>
+            <ul>
+                <li>local storage or accounts so that people can keep track of their reviews and reports</li>
+                <li>ability to upload photos with reviews</li>
+                <li>some solve for the fact that the web version is laggy because the images I scraped from DoorDash are too large</li>
+            </ul>
+            <p>Even though there are still some bugs, I'm really happy with what I was able to do in a few months. I'm really thankful for everything 
+                I've learned about coding and about myself during this process, and it feels like I've become a better engineer along the way :))</p>
+        </section>
 
         </main>
     </body>
