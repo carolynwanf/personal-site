@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+   
+    <link rel="stylesheet" href="../style.css">
+</head>
+<html>  
+   
+    <body>
+        <!-- nav -->
+        <div class ='navbox'>
+            <div class='quick-link-div'><a class='quick-link' href='#react'>React</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#backend'>backend</a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#'></a></div>
+            <div class='quick-link-div'><a class='quick-link' href='#'></a></div>
+        </div>
+        <main>
+        </div>
+            <!-- title and image -->
+            <h1>Pomodoer</h1>
+            <figure>
+                <img class='big-image' src='../public/pomodoer-icon.png' alt='landing page for Pomodoer'/>
+                <figcaption>A study room on Pomodoer</figcaption>
+            </figure>
+            <!-- overview -->
+            <h2>Overview</h2>
+            <div class='overview'>
+                <div class="column">
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>when:</p>
+                        <p>February 2021</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>Objective:</p>
+                        <p>Make a tool that uses the Pomodoro technique (studying in 25 minute increments with 5 minute breaks) to help students studying together remotely stay on track.</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>my motivations:</p>
+                        <p>I wanted to get practice using React and coding with JS.</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>technologies:</p>
+                        <p>React, Node.js, websockets</p>
+                    </div>
+                    <div class='subcategory-left'>
+                        <p class='overview-subtitle'>Where can I see this?</p>
+                        <p><a class='small-link' href='https://pomodoer.herokuapp.com/'>This website</a> and <a class='small-link' href='https://github.com/carolynwanf/pomodoer'></a>Github.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class='subcategory-right'>
+                        <p class='overview-subtitle'>Current solutions:</p>
+                        <p>There are other apps based on the Pomodoro technique with timers and to-do lists, but none of them were had interfaces where you and 
+                            your friends could be on the same timer and share the same to-do list.</p>
+                    </div>
+                    <div class='subcategory-right'>
+                        <p class='overview-subtitle'>The final product: </p>
+                        <p>A web app that lets people join rooms with their friends where they can set to-dos that everyone can see and work on the same timer.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- sections -->
+            <section id='react'>
+                <h2>Building the frontend with React</h2>
+                <p>Getting started on this project was probably the hardest part for me. Even though I had taken intro to coding at school, actually making something 
+                    was a lot more daunting than writing algorithms and solving pset problems with code. I had no idea how to set up my development environment or do 
+                    anything practical. Additionally, I had also only been learning React for two weeks at this point, and wasn't very familiar with the framework.</p>
+                <br>
+                <p>After lots and lots of Googling and some help from some of the mentors at my first hackathon, I managed to install everything I needed and find 
+                    React tutorials that helped strengthen my understanding of the framework. A week later, I had a working timer and to-do list.
+                </p>
+               
+            </section>
+            <section id='backend'>
+                <h2>Using websockets and Node.js to implement rooms</h2>
+                <p>To make Pomodoer different from websites and apps that are currently available, I set up rooms using websockets, specifically Socket.io. To set up websockets, 
+                    I also needed a server and I decided on using Node.js because it seemed like the most popular one. </p>
+                <br>
+                <p>The hardest part of integrating the server with my frontend was syncing the frontend for all users in the same room. To do so, I had to move all of the 
+                   calculations and storage that I was doing in my React app to a database on the server. This way, when someone new joined a room all I had to do was find 
+                   the information associated with that room and send it to their browser. Although having a database hosted on my server isn't sustainable (because if the 
+                   server goes down I lose all my data), I decided to move on because I wanted to work on other projects.
+                </p>
+               
+            </section>
+        </main>
+    </body>
+</html>
