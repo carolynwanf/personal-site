@@ -15,6 +15,7 @@ var server = app.listen(port, function() {
 });
 app.use(express.static('build'));
 app.get('/', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.get('/defaultsite', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
 app.get('/:page', (req, res) => {
     console.log(req.params)
     res.sendFile(path.resolve('build', `${req.params}/index.html`))});
