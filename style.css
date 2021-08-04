@@ -403,6 +403,32 @@ button:hover {
   
 }
 
+/* sweaters */
+
+.sweaters {
+  position: fixed;
+  top: 0.5em;
+  right: 4vw;
+  width: 200px;
+}
+
+.sweater {
+  margin-top:10px;
+}
+
+.odd {
+  transform: rotate(25deg);
+}
+
+.even {
+  transform: rotate(-25deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .sweaters{
+    display:none;
+  }
+}
 
 
 
