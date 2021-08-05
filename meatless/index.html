@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+    <title>Meatless</title>
+    <link rel="shortcut icon" type="image/jpg" href="../public/favicon.ico"/>
     <meta name="viewport" content="width=device-width" />
     <meta charset="utf-8" />
    
@@ -43,25 +45,32 @@
                     </div>
                     <div class='subcategory-left'>
                         <p class='overview-subtitle'>my motivations:</p>
-                        <p>I had built a few small projects and I wanted to build something that would be useful to me and my friends/family in our everyday lives. Because my sister and I are vegetarian and a lot of my friends want to eat less meat for climate reasons, the above objective was perfect.</p>
+                        <p>I had built a few small projects, but I wanted to build something more complex and put my ability to learn new things to the test. 
+                        I decided on the objective above because I had recently become vegetarian and found that it was pretty difficult to scan most menus 
+                        and figure out what I could eat.</p>
                     </div>
                     <div class='subcategory-left'>
                         <p class='overview-subtitle'>technologies:</p>
-                        <p>Flutter, Dart, Node.js, MongoDB, Puppeteer (web-driver).</p>
+                        <p>Flutter, Dart, Node.js, MongoDB, Puppeteer (headless chrome).</p>
                     </div>
                     <div class='subcategory-left'>
                         <p class='overview-subtitle'>Where can I see this?</p>
-                        <p><a class='small-link'>Github</a> and <a class='small-link' href='https://www.figma.com/file/aYSBjmEcBOwD2dlwTUQ1hw/Meatless?node-id=108%3A600'>Figma</a> for now, but I'm currently trying to get the web-app deployed!</p>
+                        <p><a class='small-link'>Github</a> and <a class='small-link' href='https://www.figma.com/file/aYSBjmEcBOwD2dlwTUQ1hw/Meatless?node-id=108%3A600'>Figma</a> for now, but I'm currently trying to get the web app deployed!</p>
                     </div>
                 </div>
                 <div class="column">
                     <div class='subcategory-right'>
                         <p class='overview-subtitle'>Current solutions:</p>
-                        <p>Apps like DoorDash and Yelp allow you to filter for “vegetarian” or “vegan” restaurants. However, these are usually just restaurants that have the word “vegetarian” somewhere on their menu, in their description, or in their name. I also found during some initial chats that people (even those who wanted to change their diets) tended to have aversion to the word “vegetarian” because they felt that it implied commitment or exclusivity.</p>
+                        <p>Apps like DoorDash and Yelp allow you to filter for “vegetarian” or “vegan” restaurants. However, these are usually just restaurants that 
+                        have the word “vegetarian” somewhere on their menu, in their description, or in their name. I also found during some initial chats that 
+                        people (even those who wanted eat less meat) had an aversion to the word “vegetarian” because they felt that it implied commitment or affilation with 
+                        a lifestyle they didn't want to be associated with.</p>
                     </div>
                     <div class='subcategory-right'>
                         <p class='overview-subtitle'>The final product: </p>
-                        <p>A native app that allows you to search for restaurants and menu items by zip code, sort restaurants by number of vegetarian dishes or the ratio of vegetarian main dishes to all main dishes, search for specific dishes within results, star dishes you’re interested in, submit reviews and ratings for dishes, and report dishes that contain meat.</p>
+                        <p>A native app that allows you to search for restaurants and menu items by zip code, sort restaurants by number of vegetarian dishes 
+                        or the ratio of vegetarian main dishes to all main dishes, search for specific dishes within results, star dishes you’re interested in, 
+                        submit reviews and ratings for dishes, and report dishes that contain meat.</p>
                     </div>
                 </div>
             </div>
@@ -75,27 +84,27 @@
                     </video>
                     <p class='summary-header'>How the scraper works:</p>
                     <ol>
-                        <li> Launch Puppeteer (headless browser).</li>
-                        <li> Navigate to DoorDash's website.</li>
-                        <li> Click into every food category and scroll down to scrape links until you can’t scroll anymore.</li>
-                        <li> Remove duplicate links.</li>
-                        <li> Navigate to each link and click into each dish one by one to scrape its name, images, description, and ordering requirements. Write this information to a MongoDB database.</li>
+                        <li>Launch Puppeteer (headless browser).</li>
+                        <li>Navigate to DoorDash's website.</li>
+                        <li>Click into every food category and scroll down to scrape links until you can’t scroll anymore.</li>
+                        <li>Remove duplicate links.</li>
+                        <li>Navigate to each link and click into each dish one by one to scrape its name, images, description, and ordering requirements. Write this information to a MongoDB database.</li>
                     
                     </ol>
                 </div>
                 <p>I scraped DoorDash for restaurant information because a lot of restaurants had moved onto the platform during the pandemic, and 
                     it’s also the most widely used food delivery app in the US. It was a bit difficult to get started because DoorDash 
-                    has a dynamic website (html/css for the site are changed by code running in the browser/on the server), and the tutorial
-                     I had watched was for scraping static sites, but I eventually discovered that I needed to use a headless browser (Puppeteer)
-                      to mimic human interaction with the site. Using a headless browser, I could imitate actions like clicking on things, typing, scrolling, waiting for elements to 
+                    has a dynamic website (this means that the html/css for the website are changed by code running in the browser/on the server), and the tutorial
+                     I had watched was for scraping static websites. After a bit more looking around, I found that I needed to use a headless browser (Puppeteer)
+                      to mimic human interaction with the website. Using a headless browser, I could imitate actions like clicking on things, typing, scrolling, waiting for elements to 
                       load, and running code in the browser console. </p>
                       <br>
                 <p> Another big issue I ran into was with selecting the elements I wanted to interact with. When I first tried to run my code that targeted
-                    the website's gibberish class names, I found that DoorDash an anti-scraping measure in place that scrambled class names when it sensed scraping. 
+                    DoorDash's gibberish class names, I found that DoorDash had an anti-scraping measure in place that scrambled class names when it sensed scraping. 
                     This made the whole process more tedious because for every element I wanted to interact with, I had to <strong>a)</strong> 
                     find distinctive features that I could select for, or <strong>b)</strong> find a distinctive neighbor/parent/child and 
-                    traverse the DOM. Unfortunately, because I had to do it this way, my current scraper would fall apart as soon as any DoorDash 
-                    engineer decides to add or remove a div from their element tree (which actually did happen while I was scraping).</p>
+                    traverse the DOM. Unfortunately, because I had to do it this way, my current scraper fails as soon as any DoorDash 
+                    engineer decides to add or remove an element from their element tree (which actually did happen while I was scraping).</p>
                 <br>
                 <p>After a few weeks, I ended up with a database of 1,100+ restaurants and 60,000+ dishes, all ready to be classified.</p>
 
@@ -109,21 +118,24 @@
                     <ol>
                         <li>Check if a dish's name or description contains a meat word. If yes, it's <strong>not vegetarian</strong>. If yes, but it also has a word like "impossible" or 
                             "beyond", go to step two. If no, go to step two.</li>
-                        <li>Check if the requirements can be fulfilled with vegetarian options. If yes, it's <strong>vegetarian</strong>. If no, it's <strong>not vegetarian</strong>.</li>    
+                        <li>Check if the dish's requirements can be fulfilled with vegetarian options. If yes, it's <strong>vegetarian</strong>. If no, it's <strong>not vegetarian</strong>.</li>    
                     </ol>
                 </div>
                 <p>I did some initial Googling and discovered that the kind of problem I wanted to solve was called a binary classification problem. 
                 I wanted an algorithm that took in the name, description, and requirements of a dish and returned whether or not it was vegetarian. 
                 Before I could even get started with models, however, I had to prepare my training and testing data. I created strings for 2,500 
-                dishes consisting of their name, description, and requirements, before labelling and spliting them into testing and training sets 
+                dishes (consisting of their name, description, and requirements) before labelling and spliting them into testing and training sets 
                 (20/80, based on the Pareto principle).</p>
                 <br>
-                <p>I then trained and tested logistic regression models, neural networks, and Bayes classifiers. 
-                Immediately, I was able to rule out the Bayes classifier because its results were only 10% better than guessing. I'm not sure why, 
-                but I think it may be because the Bayes classifier assumes conditional independence of the features (in this case, words), of an instance (dish string), 
-                which did not hold for this case. The other two models were slightly underperformed my brute force algorithm in terms of accuracy 
-                given a dish was vegetarian and overall accuracy, and to make sure they would underperform consistently I trained 100 more of each 
-                model on different 20/80 divisions of data and calculated the average result.</p>
+                <p>I then trained and tested logistic regression models, neural networks, and naive Bayes classifiers. 
+                Immediately, I was able to rule out the naive Bayes classifier because its results were only 10% better than guessing. I'm not sure why this happened, 
+                but I think it may be because the Bayes classifier assumes conditional independence of the features (in this case, words), of an instance (a dish string), 
+                which did not hold for this case. </p>
+                <br>
+                <p>The other two models slightly underperformed my brute force algorithm in terms of accuracy given a dish was vegetarian and overall 
+                accuracy. To make sure that the neural network and logistic regression models would consistently underperform my brute force model, I trained 100 more of each 
+                model on different 20/80 divisions of the dataset and calculated the average result. Because the average results were still worse than my brute force model,
+                I decided to use my brute force model for production.</p>
                
             </section>
             <section id='figma'>
@@ -145,8 +157,8 @@
                     </figure>
                     
                     <li>A restaurants page for returning restaurants near you. On this page, each restaurant has a card that contains their 
-                        vegetarian friendliness rating (ratio of vegetarian main dishes to all main dishes), a brief description of their 
-                        food, their rating (the average rating of all the main dishes divided by the number of main dishes), their distance 
+                        vegetarian friendliness rating (the ratio of vegetarian main dishes to all main dishes) in the form of a pie chart, 
+                        a brief description of their food, their rating (the average rating of all the main dishes), their distance 
                         from your current location, their hours, and the number of mains, sides, and desserts they offered. On this page, 
                         people would have the ability to sort results, search within results, and filter results by hours.</li>
                     <figure>
@@ -162,7 +174,8 @@
                     </figure>  
                     <li>A dishes page for returning dishes near you. On this page, each dish has a card with its name, description, restaurant, 
                         distance from your current location, hours, rating, reviews, and price. Each card also has a pin icon used for pinning 
-                        dishes you're interested in. On this page, people would have the ability to sort results, search within results, and filter results by hours.</li>
+                        dishes you're interested in (this feature is replaced by stars in the production version). On this page, people would 
+                        have the ability to sort results, search within results, and filter results by hours.</li>
                       
                     <figure>
                         <div class='images'>
@@ -184,13 +197,14 @@
                     
                 </ol>
                 
-                <p>Once the prototype was ready, I asked three of my friends to interact with the it and say their thoughts out loud while 
-                    I took notes. I tried to provide as little direction as possible so that could I get a good gauge of which features were confusing and which ones were intuitive. 
-                    My notes from these sessions are available <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
+                <p>Once the prototype was ready, I asked three of my friends to test it out and say their thoughts out loud while 
+                    I took notes. I tried to provide as little direction as possible so that could I get a good gauge of which features were 
+                    confusing and which ones were intuitive. My notes from these sessions are available 
+                    <a class='small-link' href='https://docs.google.com/document/d/10kN-kOcRb5MsUomw1ccmU7mD8yB1U1NfQwMlfbMC6P4/edit?usp=sharing'>here</a>.</p>
                 <div class='summary'>
                     <p class='summary-header'>Big takeaways from UI testing:</p>
                     <ol>
-                        <li>The images on the dishes page made the entire site more attractive (and make everyone hungry).</li>
+                        <li>The images on the dishes page made the entire site more attractive (and made everyone hungry).</li>
                         <li>The meaning of the pie charts on the restaurant page is not immediately clear, but becomes clear after prolonged interaction with the site.</li>
                         <li>Colors should be kept to a minimum to enhance the images of food</li>
                         <li>There is a strong desire for more filters (e.g. cuisines, food allergies)</li>        
@@ -202,20 +216,23 @@
                 <h2>
                     Learning Flutter and developing my app!!
                 </h2>
-                <p>I decided to learn Flutter because I wanted my final app to run natively on iOS, Android, and the browser. I also wanted to see if my 
+                <p>I decided to learn Flutter because I wanted my app to run natively on iOS, Android, and the browser and it seemed convenient that with 
+                    Flutter I could do this all from one codebase. I also wanted to see if my 
                     experience with React would translate to other frontend frameworks. To my delight, it did! Flutter also has stateful and stateless class 
-                    components, the ability to set states and initiate re-renders, and built-in elements called widgets. Each kind of widget has its own specific 
-                    attributes (like an IconButton widget has a icon attribute to specify which icon you want to make into a button) that can be set when it's called.  </p>
+                    components, the ability to set states and initiate re-renders, and built-in elements (called widgets). Each kind of widget has its own specific 
+                    attributes. For example, an IconButton widget has a icon attribute to specify which icon you want to make into a button, and a style attribute 
+                    to specify styling. Attributes are set when the widget is called. </p>
                     <br>
-                    <p>It was cool that Flutter had so many pre-built abstractions over 
-                    their simpler elements for developers to use (e.g. they have a horizontal line divider that's just a thin container element that you can set the height, width, and color of). 
-                    It felt like using React + React-Bootstrap on steroids.</p> 
+                    <p>It was cool that Flutter had so many pre-built abstractions over their simpler elements for developers to use (e.g. they have a 
+                    horizontal line divider that's just a thin container element that you can set the height, width, and color of), but also had 
+                    the optionality of using simple elements to create your own custom elements. It felt like I was constantly discovering new ways to use their widgets
+                    to make my UI better!</p> 
 
                     <br>
 
                     <p>Here's what Meatless looks like now:</p>
                     <ol>
-                        <li class='needs-top-margin'>The landing page:</li>
+                        <li class='needs-top-margin'>The landing page</li>
                         <figure>
                             <div class='images'>
                                 <img class='web-image' src='../public/landing-page.png'/> 
@@ -254,7 +271,7 @@
                             </div>
                            
                         </figure>  
-                        <li>Video click-through of the features</li>
+                        <li>A video click-through of the features</li>
                         <figure>
                             <video class='web-image' loop autoplay muted controls>
                                 <source src='../public/full-walkthrough.mov'>
@@ -271,19 +288,21 @@
                 
                 <br>
 
-                <p>I'm really proud that the current version of meatless is both responsive and adaptive! This means that it has layouts that change size depending on the screen size of a device and also
-                deals with the different inputs and expectations that come with different types of devices. For example, the number of restaurant cards in a row changes with 
-                the screen width, and once the screen is less than 500 pixels wide, it changes to a mobile interface with lower visual density and a one column list instead of a grid. 
-                Doing this required a lot of extra design and coding work, but I'm glad I did it! I was able to learn a lot more about Flutter and 
-                make an app that looks good on multiple device types as a result.</p>
+                <p>I'm really proud that the current version of Meatless is both responsive and adaptive! This means that it has layouts that change 
+                size depending on the screen size of a device and also deals with the different inputs and expectations that come with different 
+                types of devices. For example, the number of restaurant cards in a row changes with the screen width (responsiveness), and once 
+                the screen is less than 500 pixels wide, it changes to a mobile interface with lower visual density and a one column list instead of 
+                a grid (adaptiveness). Doing this required a lot of extra design and coding work, but I'm glad I did it! I was able to learn a lot 
+                more about Flutter and make an app that looks good on multiple device types as a result.</p>
 
 
 
                 <div class='summary'>
                     <p class='summary-header'>Major changes from prototype to app:</p>
                     <ol>
-                        <li>The pin icons were too busy-looking, so I changed them to stars.</li>
-                        <li>I realized that infinite scroll didn't make much sense for my use-case, so I made the restaurants and dishes displays paginated.</li>
+                        <li>The pin icons looked too busy, so I changed them to stars.</li>
+                        <li>I didn't implement any hours filters because it was too difficult to find the hours for each restaurant.</li>
+                        <li>I realized that infinite scroll didn't make much sense for my use case, so I made the restaurants and dishes displays paginated.</li>
                         <li>Returning restaurants near an address was pretty difficult since I didn't have latitude or longitude information, so I made it so that you could enter a zipcode and find restaurants in that zipcode instead.</li>
                         <li>Since all of my friends had been really attracted to the photos during the UI testing phase, I added photos to the restaurant cards on the restaurants page.</li>
                         <li>I got rid of features that require users to be useful (reviews, ratings).</li>      
@@ -295,7 +314,7 @@
                     Mistakes I made (and learned from)
                 </h2>
                 
-                   <p>For a good part of this process, I was setting goals that would've only been doable if nothing I had built before broke, or if nothing new came up during the week. This meant 
+                   <p>For a good part of this process, I was setting goals that were only doable if nothing I had built in previous weeks broke, or if nothing new came up during the week. This meant 
                         that when I had to do something urgently that wasn't a part of my goals for the week, I would get really stressed. 
                    </p>
 
@@ -304,7 +323,7 @@
                        <p>It's helpful for me to make two sets of weekly goals--what I want to get done in seven days and what I think I can get done in four days--and be okay with only completing the latter.</p>
                        <br>
                    </div>
-                    <p>I made about 90% of my Figma prototype rectangle by rectangle, text box by text box, no re-usable components, no layouts. In retrospect, I probably 
+                    <p>I made about 90% of my Figma prototype rectangle by rectangle, text box by text box, no reusable components, no layouts. In retrospect, I probably 
                         should've realized something was wrong when I spent a day just adjusting the margins pixel by pixel on all 50 of my dish cards, but hey, hindsight is 20/20. 
                         </p>
                     <div class='summary'>
@@ -315,22 +334,22 @@
                     </div>
                     <p>I actually had to scrape the exact same content from DoorDash twice because the first time I only scraped the names, descriptions, 
                         and requirements of dishes. I did this because I only wanted to scrape enough examples to create my training and testing data for 
-                        the ML phase, but this really back-fired on me because I 1) didn't have the information I needed for the app and 2) couldn't even 
+                        the ML phase, but this really backfired on me because I 1) didn't have the information I needed for the app and 2) couldn't even 
                         use the information I had to find the information I needed (restaurant information, dish images, etc). </p>
                     <div class='summary'>
                         <p class='summary-header'>What I learned: </p>
                         <p>You can never 
                             have too much data! Even if it's not structured efficiently in your database, you can always run a migration later. You can't 
-                            re-structure information you don't have.</p>
+                            restructure information you don't have.</p>
                             <br>
                     </div>
                     <p>I made all of my Flutter components rely on each other for passing around information, specifically the starred status of dishes.
-                        While this might be fine for mobile apps, I realized this was an issue when I tried to route my web-app and found that components kept erroring 
+                        While this might be fine for mobile apps, I realized this was an issue when I tried to route my web app and found that components kept erroring 
                         because when I routed to a new URL, they weren't able to inherit states from other components.</p>
                     <div class='summary'>
                         <p class='summary-header'>What I learned: </p>
-                        <p>For web-apps, it's probably 
-                            a good idea to pass information that needs to go to components at different URLs through the backend. This way, when a page re-loads, my components don't lose 
+                        <p>For web apps, it's probably 
+                            a good idea to pass information that needs to go to components at different URLs through the backend. This way, when a page reloads, my components don't lose 
                             their state because it's not all on the browser.</p>
                             <br>
                     </div>
