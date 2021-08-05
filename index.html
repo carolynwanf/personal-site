@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="style.css">
+    <script src='scroll.js'></script>
 </head>
 
 
@@ -16,10 +17,10 @@
    <header>
        
         <div class='navbox'>
-            <div class='quick-link-div'><a class='quick-link' href='#projects'>Projects</a></div>
-            <div class='quick-link-div'><a class='quick-link' href='#crafts'>Crafts</a></div>
-            <div class='quick-link-div'><a class='quick-link' href='#baking'>Baking</a></div>
-            <div class='quick-link-div'><a class='quick-link' href='#contact'>Contact</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('projects')">Projects</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('crafts')">Crafts</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('baking')">Baking</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('contact')">Contact</a></div>
         </div>
 
        
@@ -40,7 +41,7 @@
                     <div class='cat-wrapper'><img class="big-image" src='public/me-and-toffee.jpg' alt="me and a cat"/></div>
                     <figcaption>me and Toffee, my favorite cat</figcaption>
                 </figure>
-                <p> I'm interested in the open ocean, clean tech, human-centered design, learning new things, and getting better at explaining new things. I'm currently trying to implement local storage for my app, Meatless.</p>
+                <p> I'm interested in the <strong>open ocean, clean tech, human-centered design</strong>, learning new things, and getting better at explaining new things. I'm currently trying to implement local storage for my app, Meatless.</p>
 
             </section>
 
@@ -52,7 +53,7 @@
                         <a  href='/meatless'> 
                             <div id=project>
                                 <p class='project-header'>Meatless</p>
-                                <p>A native app to help people who want to eat less meat find meatless dishes near them. It was my first time working with webscraping, natural language processing, MongoDB, Figma components, and Flutter. It took me a few months to get it functional, but I definitely learned a lot!</p>
+                                <p>A native app to help people who want to eat less meat find meatless dishes near them. It was my first time working with webscraping, natural language processing, MongoDB, Figma components, and Flutter, so I definitely learned a lot!</p>
                                 <img class='project-image' src="public/meatless-icon.png"/>  
                             </div>
                         </a>
@@ -60,20 +61,20 @@
                         <a  href='/empower'>
                             <div id=project>
                                 <p class='project-header'>Empower</p>
-                                <p>A hackathon project for Asian American community members to report crimes and request help for everyday tasks. It was meant to serve as a tool to enhance safety and connectivity in communities.</p>
+                                <p>A hackathon project for Asian American community members to report crimes and request help for everyday tasks. It works to enhance safety and connectivity in communities.</p>
                                 <img class='project-image' src="public/empower-icon.jpeg"/> 
                             </div>
                         </a>
                         <br>
                         <a href='/coral-generator'><div id=project>
                             <p class='project-header'>Coral Generator</p>
-                            <p>A quick build inspired by Blue Planet II (voiced by David Attenborough). It generates cute coral seascapes for use as wallpapers/zoom backgrounds.</p>
+                            <p>A quick build inspired by Blue Planet II (voiced by David Attenborough). This website generates cute coral seascapes for use as wallpapers/Zoom backgrounds.</p>
                             <img class='project-image' src="public/coral-icon.png"/> 
                         </div></a>
                         <br>
                         <a href='pomodoer'><div id=project>
                             <p class='project-header'>Pomodoer</p>
-                            <p>My first-ever hack: a tool to help students studying together remotely stay productive. Although not much got done during the hackathon itself, I was so invested in the idea that I completed it on my own afterwards.</p>
+                            <p>My first-ever hack: a web-app to help students studying together remotely stay productive. Although not much got done during the hackathon itself, I was so invested in the idea that I completed it on my own afterwards.</p>
                             <img class='project-image' src="public/pomodoer-icon.png"/> 
                         </div></a>
                     </div>
@@ -87,7 +88,7 @@
                     <a href='/chinese-knotting'>
                         <div id=project>
                             <p class='project-header'>Chinese Knotting</p>
-                            <p>My latest pandemic obsession! I started with making little charms, and now I'm working on all sorts of beaded bracelets. Maybe eventually I'll make a jacket out of knots??</p>
+                            <p>My latest pandemic obsession! I started with making little charms, and now I'm working on beaded bracelets. Maybe eventually I'll make a jacket out of knots??</p>
                             <img class='project-image' src="public/noodling.png"/> 
                         </div>
                     </a>
@@ -95,7 +96,7 @@
                     <a href='/painting'>
                         <div id=project>
                             <p class='project-header'>Painting</p>
-                            <p>Oil painting was a big part of my teens and will always hold a special place in my heart. Here are some works I'm most proud of!</p>
+                            <p>Oil painting was a big part of my teens and will always hold a special place in my heart. Here are some paintings I'm most proud of!</p>
                             <img class='project-image' src="public/triptych-3-icon.jpeg"/> 
                         </div>
                     </a>
@@ -130,9 +131,9 @@
             <section id='contact'>
                 
                 <h2>Contact me!</h2>
-                    <div class='contact-button'><a class='quick-link' href='https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=analogdaylight@gmail.com'>email</a></div>
-                    <div class='contact-button'><a class='quick-link' href='https://www.linkedin.com/in/carolyn-wang-5a638519a/'>linkedin</a></div>
-                    <div class='contact-button'><a class='quick-link' href='https://www.instagram.com/carolyniann/'>instagram</a></div>
+                   <div class='contact-buttons'> <div class='contact-button'><a class='contact-link' href='https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=analogdaylight@gmail.com'>email</a></div>
+                   <div class='contact-button'><a class='contact-link' href='https://www.linkedin.com/in/carolyn-wang-5a638519a/'>linkedin</a></div>
+                   <div class='contact-button'><a class='contact-link' href='https://www.instagram.com/carolyniann/'>instagram</a></div></div>
             </section>
         </main>
         
