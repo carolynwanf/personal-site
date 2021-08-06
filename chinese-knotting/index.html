@@ -6,15 +6,27 @@
     <meta charset="utf-8" />
    
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <script src='../scroll.js'></script>
 </head>
 <html>  
     <body>
         
-            
+        <div class ='navbox'>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('tools')">tools</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('creations')">creations</a></div>
+            <!-- <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('directions')">directions</a></div>
+            <div class='quick-link-div'><a class='quick-link' onclick="scrollToElement('tips')">tips</a></div> -->
+        </div> 
         
         <main>
+            
+            
             <h1>Chinese Knotting</h1>
+            <figure>
+                <img  src='../public/noodling.png' alt='A knotted bracelet'/>
+                <figcaption>A knotted bracelet I made for a friend's birthday</figcaption>
+            </figure>
             <p>Chinese knotting has been around for thousands of years! The earliest known instance of knotting for accessorization is a shell 
                 necklace from about 20,000 years ago during the New Stone Age. In the following millenia the royal palace drove innovation in 
                 knot-making by housing and supporting artisans who practiced the craft.</p>
@@ -24,26 +36,83 @@
                 knots were used in everything from chairs to wall art to hair pins! In spring of 2021, my sister and I decided that Chinese knots 
                 were cool and began to learn the craft as a bonding activity. 
             </p>
+            <br>
 
-            <figure>
-                <img  src='../public/noodling.png' alt='A knotted bracelet'/>
-                <figcaption>A knotted bracelet I made for a friend's birthday</figcaption>
-            </figure>
+           
            
             <section id='tools'>
                 <div class='summary'>
-                    <h2>Tools to get started</h2>
+                    <p class='summary-header'>Tools to get started</p>
                     <ul>
                         <li>Cork/foam board or other surface to stab pins into to keep the knot in place as you work</li>
                         <li>Synthetic fiber/silk string. Amazon has a lot of good options!</li>
                         <li>Fire. I don't have a lighter so I use my stove. This is to seal the ends of your knot. To seal, hold your ends near the flame. NOT IN. 
                             IT WILL BURN</li>
                         <li>Pins. Lots of pins. More pins than you'd expect. I like the ones that are long with little spheres on the blunt ends.</li>
-                        <li>(Optional) a <a class='small-link' href='https://www.amazon.com/Chinese-Knotting-Illustrated-Guide-Projects/dp/160220019X#:~:text=Chinese%20Knotting%3A%20An%20Illustrated%20Guide%20to%20100%2B%20Projects%20is%20a,dating%20back%20to%20prehistoric%20times.'>knotting book</a>! Tutorials on Youtube are great, but it's also nice to have a physical guide with steps to follow</li>
+                        <li>A needle and thread for sewing knots together. Otherwise, they don't keep their shape.</li>
+                        <li>(optional) A <a class='small-link' href='https://www.amazon.com/Chinese-Knotting-Illustrated-Guide-Projects/dp/160220019X#:~:text=Chinese%20Knotting%3A%20An%20Illustrated%20Guide%20to%20100%2B%20Projects%20is%20a,dating%20back%20to%20prehistoric%20times.'>knotting book</a>! Tutorials on Youtube are great, but it's also nice to have a physical guide with steps to follow</li>
                     </ul>
                 </div>
                 
             </section>
+            <section id='creations'>
+                <h2>Creations</h2>
+                <p>These are my favorite knotting projects so far. I've provided the names of all the knots and techniques so that you can re-create them on your own! 
+                    </p>
+
+                <div class='guide'>
+                    <img class='knots' src='../public/kate-bracelet.png'/>
+                    <div class='description'>
+                        <div class='summary'>
+                            <p class='knot-header'>Kate's Birthday Bracelet</p>
+                            <p>components from top to bottom:</p>
+                            <ol>
+                                <li>double connection knot</li>
+                                <li>twined cord</li>
+                                <li>turquoise bead</li>
+                                <li>common whipping to cover the transition between cord colors</li>
+                                <li>four-squared endless knot</li>
+                                <li>double connection knot</li>
+                                <li>macrame square knot (aka extended flat knot) to secure opalite bead</li>
+                                <li>double connection knot</li>
+                                <li>stone chime knot with all loops except the corner outer loops tightened</li>
+                                <li>turquise bead</li>
+                                <li>macrame half knot</li>
+                                <li>button knot</li>
+                            </ol>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+               
+                <div class='guide'>
+                    <img class='sun' src='../public/sun-bracelet.png'/>
+                    <div class='description'>
+                        <div class='summary'>
+                            <p class='knot-header'>Sun Bracelet</p>
+                            <p>components from top to bottom:</p>
+                            <ol>
+                                <li>double connection knot</li>
+                                <li>prosperity knot</li>
+                                <li>double connection knot</li>
+                                <li>sauvastika creeper butterfly knot</li>
+                                <li>button knot</li>
+                                <li>variant of the eleven-loop good luck knot (with two extra loops) with an opalite bead sewn through the middle</li>
+                                <li>button knot</li>
+                                <li>round brocade knot with the outer loops tightened with a jade bead sewn through the middle</li>
+                                <li>double connection knot</li>
+                                <li>tassel knot</li>
+                                <li>prosperity knot</li>
+                                <li>button knot</li>
+                                <li>two figure-eight knots</li>
+                            </ol>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+            
             
 
         </main>

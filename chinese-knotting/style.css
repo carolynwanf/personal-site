@@ -1,0 +1,39 @@
+.guide {
+    margin-top: 1em;
+    display:flex;
+    align-items: flex-start;
+}
+
+.knots {
+    width: 33%;
+    margin-right: 3%;
+    margin-top: 2%;
+    
+}
+
+.sun {
+    width: 25%;
+    margin-left: 3%;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+
+.description {
+    width: 60%;
+    /* margin-right: 5% */
+}
+
+ol{
+    margin-left: 1em;
+    margin-top:0.5em;
+}
+
+.knot-header {
+    color: #5294e0;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-shadow:  -1px 1px #0b3682, -2px 1px #0b3682;
+    letter-spacing: 0.06em;
+  
+  }
