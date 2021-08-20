@@ -434,22 +434,28 @@ button:hover {
 }
 
 /* contact buttons */
-/* .contact-buttons{
+.contact-buttons{
   display:flex;
   align-items: flex-start;
-} */
+}
 
 .contact-button {
   width: fit-content;
   /* width: 200px; */
   margin-top: 0.5em;
-  /* margin-right: 1em; */
+  margin-right: 1em;
   background-color:#f7c2c6;
   padding: 0.5em;
   border-radius: 5px;
   box-shadow: -1px 1px #0b3682, -2px 2px #0b3682, -3px 3px #0b3682, 1px -1px white, 2px -2px white, 3px -3px white;
   border: #0b3682 2px solid;
   
+}
+@media only screen and (max-width: 450px) {
+  .contact-buttons{
+    display:inline-block;
+    align-items: flex-start;
+  }
 }
 
 .contact-button:hover {
