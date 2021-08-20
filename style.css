@@ -434,14 +434,16 @@ button:hover {
 }
 
 /* contact buttons */
-.contact-buttons{
+/* .contact-buttons{
   display:flex;
   align-items: flex-start;
-}
+} */
 
 .contact-button {
+  width: fit-content;
+  /* width: 200px; */
   margin-top: 0.5em;
-  margin-right: 1em;
+  /* margin-right: 1em; */
   background-color:#f7c2c6;
   padding: 0.5em;
   border-radius: 5px;

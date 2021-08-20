@@ -45,7 +45,7 @@
                     </div>
                     <div class='subcategory-left'>
                         <p class='overview-subtitle'>my motivations:</p>
-                        <p>I had built a few small projects, but I wanted to build something more complex and put my ability to learn new things to the test. 
+                        <p>I had built a few small projects, but I wanted to build something more complex and test my ability to learn new technologies at the same time. 
                         I decided on the objective above because I had recently become vegetarian and found that it was pretty difficult to scan most menus 
                         and figure out what I could eat.</p>
                     </div>
@@ -64,7 +64,7 @@
                         <p>Apps like DoorDash and Yelp allow you to filter for “vegetarian” or “vegan” restaurants. However, these are usually just restaurants that 
                         have the word “vegetarian” somewhere on their menu, in their description, or in their name. I also found during some initial chats that 
                         people (even those who wanted eat less meat) had an aversion to the word “vegetarian” because they felt that it implied commitment or affilation with 
-                        a lifestyle they didn't want to be associated with.</p>
+                        a lifestyle that they didn't want.</p>
                     </div>
                     <div class='subcategory-right'>
                         <p class='overview-subtitle'>The final product: </p>
@@ -94,15 +94,15 @@
                 </div>
                 <p>I scraped DoorDash for restaurant information because a lot of restaurants had moved onto the platform during the pandemic, and 
                     it’s also the most widely used food delivery app in the US. It was a bit difficult to get started because DoorDash 
-                    has a dynamic website (this means that the html/css for the website are changed by code running in the browser/on the server), and the tutorial
-                     I had watched was for scraping static websites. After a bit more looking around, I found that I needed to use a headless browser (Puppeteer)
+                    has a dynamic website (this means that the html/css for the website are changed by code running in the browser and/or on the server), and the tutorial
+                     I had watched was for scraping static websites. After a bit more looking around, I found that I needed to use a headless browser (in this case, Puppeteer)
                       to mimic human interaction with the website. Using a headless browser, I could imitate actions like clicking on things, typing, scrolling, waiting for elements to 
                       load, and running code in the browser console. </p>
                       <br>
                 <p> Another big issue I ran into was with selecting the elements I wanted to interact with. When I first tried to run my code that targeted
                     DoorDash's gibberish class names, I found that DoorDash had an anti-scraping measure in place that scrambled class names when it sensed scraping. 
-                    This made the whole process more tedious because for every element I wanted to interact with, I had to <strong>a)</strong> 
-                    find distinctive features that I could select for, or <strong>b)</strong> find a distinctive neighbor/parent/child and 
+                    This made the whole process more tedious because for every element I wanted to interact with, I had to either 
+                    find distinctive features that I could select for, or find a distinctive neighbor/parent/child and 
                     traverse the DOM. Unfortunately, because I had to do it this way, my current scraper fails as soon as any DoorDash 
                     engineer decides to add or remove an element from their element tree (which actually did happen while I was scraping).</p>
                 <br>
@@ -114,7 +114,7 @@
                 <h2>A not-so-brief venture into ML</h2>
                 <div class='summary'>
                     <p class='summary-header'>TL;DR</p>
-                    <p>I tried and using ML classifiers and they weren't as good as my brute force algorithm :(( The brute force algorithm works like this:</p>
+                    <p>I tried using ML classifiers and they weren't as good as my brute force algorithm :(( The brute force algorithm works like this:</p>
                     <ol>
                         <li>Check if a dish's name or description contains a meat word. If yes, it's <strong>not vegetarian</strong>. If yes, but it also has a word like "impossible" or 
                             "beyond", go to step two. If no, go to step two.</li>
